@@ -1,0 +1,1489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC32.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>AT32UC3A0512</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>elua_mizar32a_debug_sample</AssemblyName>
+    <Name>elua_mizar32a_debug_sample</Name>
+    <RootNamespace>elua_mizar32a_debug_sample</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+  <options />
+  <configurations />
+  <files />
+  <documentation help="" />
+  <offline-documentation help="" />
+  <dependencies>
+    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.52.0" />
+  </dependencies>
+</framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <avrtoolserialnumber>J42700053627</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x0</avrdeviceexpectedsignature>
+    <avrtoolinterface>JTAG</avrtoolinterface>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <JtagDbgClock>7500000</JtagDbgClock>
+        </InterfaceProperties>
+        <InterfaceName>JTAG</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J42700053627</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+    <avrtoolinterfaceclock>7500000</avrtoolinterfaceclock>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <Avr32Gcc>
+  <avr32gcc.common.outputfiles.hex>True</avr32gcc.common.outputfiles.hex>
+  <avr32gcc.common.outputfiles.lss>True</avr32gcc.common.outputfiles.lss>
+  <avr32gcc.common.outputfiles.eep>True</avr32gcc.common.outputfiles.eep>
+  <avr32gcc.common.outputfiles.srec>True</avr32gcc.common.outputfiles.srec>
+  <avr32gcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </avr32gcc.compiler.symbols.DefSymbols>
+  <avr32gcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\UC3A_DFP\1.0.80\include\AT32UC3A0512</Value>
+    </ListValues>
+  </avr32gcc.compiler.directories.IncludePaths>
+  <avr32gcc.compiler.optimization.level>Optimize for size (-Os)</avr32gcc.compiler.optimization.level>
+  <avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>True</avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>
+  <avr32gcc.compiler.warnings.AllWarnings>True</avr32gcc.compiler.warnings.AllWarnings>
+  <avr32gcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avr32gcc.linker.libraries.Libraries>
+  <avr32gcc.linker.optimization.GarbageCollectUnusedSections>True</avr32gcc.linker.optimization.GarbageCollectUnusedSections>
+  <avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>True</avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>
+  <avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>True</avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>
+  <avr32gcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\UC3A_DFP\1.0.80\include\AT32UC3A0512</Value>
+    </ListValues>
+  </avr32gcc.assembler.general.IncludePaths>
+  <avr32gcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\UC3A_DFP\1.0.80\include\AT32UC3A0512</Value>
+    </ListValues>
+  </avr32gcc.preprocessingassembler.general.IncludePaths>
+</Avr32Gcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <Avr32Gcc>
+  <avr32gcc.common.outputfiles.hex>True</avr32gcc.common.outputfiles.hex>
+  <avr32gcc.common.outputfiles.lss>True</avr32gcc.common.outputfiles.lss>
+  <avr32gcc.common.outputfiles.eep>True</avr32gcc.common.outputfiles.eep>
+  <avr32gcc.common.outputfiles.srec>True</avr32gcc.common.outputfiles.srec>
+  <avr32gcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>USE_GIT_REVISION</Value>
+      <Value>ELUA_CPU=AT32UC3A0512</Value>
+      <Value>ELUA_BOARD=MIZAR32A</Value>
+      <Value>ELUA_PLATFORM=AVR32</Value>
+      <Value>__BUFSIZ__=128</Value>
+      <Value>ELUA_CPU_AT32UC3A0512</Value>
+      <Value>ELUA_BOARD_MIZAR32A</Value>
+      <Value>ELUA_PLATFORM_AVR32</Value>
+      <Value>USE_MULTIPLE_ALLOCATOR</Value>
+      <Value>LUA_PACK_VALUE</Value>
+      <Value>ELUA_ENDIAN_BIG</Value>
+      <Value>LUA_OPTIMIZE_MEMORY=2</Value>
+      <Value>FORAVR32</Value>
+      <Value>BOARD=98</Value>
+      <Value>BOOTLOADER_NONE</Value>
+      <Value>ELUA_FIRMWARE_SIZE=0</Value>
+    </ListValues>
+  </avr32gcc.compiler.symbols.DefSymbols>
+  <avr32gcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\UC3A_DFP\1.0.80\include\AT32UC3A0512</Value>
+      <Value>../inc</Value>
+      <Value>../src/platform/avr32</Value>
+      <Value>../inc/newlib</Value>
+      <Value>../src/lua</Value>
+      <Value>../src/modules</Value>
+      <Value>../src/fatfs</Value>
+      <Value>../src/rxspencer</Value>
+      <Value>../inc/niffs</Value>
+    </ListValues>
+  </avr32gcc.compiler.directories.IncludePaths>
+  <avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <avr32gcc.compiler.optimization.PrepareDataForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareDataForGarbageCollection>
+  <avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>True</avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>
+  <avr32gcc.compiler.optimization.DebugLevel>Maximum (-g3)</avr32gcc.compiler.optimization.DebugLevel>
+  <avr32gcc.compiler.warnings.AllWarnings>True</avr32gcc.compiler.warnings.AllWarnings>
+  <avr32gcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -fno-strict-aliasing -Wall</avr32gcc.compiler.miscellaneous.OtherFlags>
+  <avr32gcc.linker.general.DoNotUseStandardStartFiles>True</avr32gcc.linker.general.DoNotUseStandardStartFiles>
+  <avr32gcc.linker.general.NoStartupOrDefaultLibs>True</avr32gcc.linker.general.NoStartupOrDefaultLibs>
+  <avr32gcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+      <Value>libgcc</Value>
+      <Value>libc</Value>
+    </ListValues>
+  </avr32gcc.linker.libraries.Libraries>
+  <avr32gcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>../src/platform/avr32</Value>
+    </ListValues>
+  </avr32gcc.linker.libraries.LibrarySearchPaths>
+  <avr32gcc.linker.optimization.GarbageCollectUnusedSections>True</avr32gcc.linker.optimization.GarbageCollectUnusedSections>
+  <avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>True</avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>
+  <avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>True</avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>
+  <avr32gcc.linker.miscellaneous.LinkerFlags>-Wl,--allow-multiple-definition -Wl,--relax -Wl,--direct-data -Wl,-e,crt0 -T at32uc3a0512.ld</avr32gcc.linker.miscellaneous.LinkerFlags>
+  <avr32gcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\UC3A_DFP\1.0.80\include\AT32UC3A0512</Value>
+    </ListValues>
+  </avr32gcc.assembler.general.IncludePaths>
+  <avr32gcc.assembler.debugging.DebugLevel>Default (-g)</avr32gcc.assembler.debugging.DebugLevel>
+  <avr32gcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\UC3A_DFP\1.0.80\include\AT32UC3A0512</Value>
+    </ListValues>
+  </avr32gcc.preprocessingassembler.general.IncludePaths>
+  <avr32gcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</avr32gcc.preprocessingassembler.debugging.DebugLevel>
+</Avr32Gcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="inc\buf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\cexcept.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\common.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\desktop\desktop_conf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\desktop\type.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\dlmalloc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\eluarpc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\elua_adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\elua_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\elua_net.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\elua_rfs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\elua_uip.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\git_version.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\linenoise.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\linenoise_posix.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\luarpc_rpc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\mmcfs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\newlib\devman.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\newlib\genstd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\newlib\ioctl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\niffs\nffs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\niffs\niffs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\niffs\niffs_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\niffs\niffs_internal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\platform.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\platform_conf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\remotefs\client.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\remotefs\os_io.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\remotefs\remotefs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\romfiles.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\romfs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\rpc_serial.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\rtype.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\salloc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\semifs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\sermux.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\shell.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\swi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\term.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\validate.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\version.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\xmodem.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\buf.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\common.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\common_fs.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\common_tmr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\common_uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\dlmalloc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\eluarpc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\elua_adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\elua_int.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\elua_mmc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\elua_mmc_sim.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\elua_uip.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\fatfs\ccsbcs.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\fatfs\diskio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\fatfs\ff.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\fatfs\ff.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\fatfs\ffconf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\fatfs\integer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\gnu-ed-1.16\buffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\gnu-ed-1.16\carg_parser.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\gnu-ed-1.16\carg_parser.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\gnu-ed-1.16\ed.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\gnu-ed-1.16\global.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\gnu-ed-1.16\io.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\gnu-ed-1.16\main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\gnu-ed-1.16\main_loop.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\gnu-ed-1.16\regex.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\gnu-ed-1.16\signal.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\linenoise.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\linenoise_posix.c">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\luarpc_desktop_serial.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\luarpc_elua_uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lapi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lapi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lauxlib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lauxlib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lbaselib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lcode.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lcode.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\ldblib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\ldebug.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\ldebug.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\ldo.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\ldo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\ldump.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\legc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\legc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lfunc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lfunc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lgc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lgc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\linit.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\liolib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\llex.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\llex.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\llimits.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lmathlib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lmem.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lmem.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\loadlib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lobject.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lobject.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lopcodes.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lopcodes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\loslib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lparser.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lparser.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lrodefs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lrotable.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lrotable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lstate.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lstate.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lstring.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lstring.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lstrlib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\ltable.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\ltable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\ltablib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\ltm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\ltm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lua.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lua.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\luac.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\luaconf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lualib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lundump.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lundump.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lvm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lvm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lzio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\lzio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lua\print.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\mmcfs.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\auxmods.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\bit.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\bitarray.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\can.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\cpu.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\elua.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\fs.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\i2c.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\lpack.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\luarpc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\modcommon.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\net.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\pd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\pio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\pwm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\spi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\term.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\tmr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\modules\uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\newlib\devman.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\newlib\genstd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\newlib\stdtcp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\newlib\stubs.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\niffs\niffs.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\niffs\niffs_api.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\niffs\niffs_internal.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\board.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\board_mizar32a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\compiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\conf_isp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\cpu_at32uc3a0128.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\cpu_at32uc3a0256.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\cpu_at32uc3a0512.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\cpu_at32uc3b0256.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\crt0.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\ds1307.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\ds1307.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\ethernet.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\ethernet.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\EVK1100\evk1100.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\EVK1100\evk1100_revA.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\EVK1101\evk1101.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\exception.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\flashc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\flashc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\gpio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\gpio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\i2c.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\i2c.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\intc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\intc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\lcd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\lcd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\MIZAR32\mizar32.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\mrepeat.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\MT48LC16M16A2TG7E\mt48lc16m16a2tg7e.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\platform.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\platform_generic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\platform_int.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\platform_ints.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\pm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\pm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\pm_conf_clocks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\preprocessor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\pwm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\pwm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\rtc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\sdramc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\sdramc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\spi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\spi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\stacks.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\stringz.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\tc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\tc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\tpaste.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\trampoline.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\type.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\uip-conf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\usart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\usart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\usb-cdc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\platform\avr32\usb-cdc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\remotefs\client.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\remotefs\elua_os_io.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\remotefs\elua_rfs.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\remotefs\remotefs.c">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\romfs.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\rxspencer\debug.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\rxspencer\engine.c">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\rxspencer\main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\rxspencer\regcomp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\rxspencer\regerror.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\rxspencer\regex.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\rxspencer\regex2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\rxspencer\regexec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\rxspencer\regfree.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\rxspencer\split.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\salloc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\semifs.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\serial\serial_posix.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\serial\serial_win32.c">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\shell\shell.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\shell\shell_adv_cp_mv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\shell\shell_adv_rm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\shell\shell_cat.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\shell\shell_clear.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\shell\shell_ed.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\shell\shell_help.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\shell\shell_ls.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\shell\shell_lua.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\shell\shell_mkdir.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\shell\shell_recv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\shell\shell_ver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\shell\shell_wofmt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\term.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\clock.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\dhcpc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\dhcpc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\lc-addrlabels.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\lc-switch.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\lc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\psock.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\psock.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\pt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\resolv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\resolv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\timer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\timer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\uip-fw.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\uip-fw.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\uip-neighbor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\uip-neighbor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\uip-split.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\uip-split.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\uip.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\uip.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\uiplib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\uiplib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\uipopt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\uip_arch.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\uip_arp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\uip\uip_arp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\xmodem.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="inc\" />
+    <Folder Include="inc\desktop\" />
+    <Folder Include="inc\newlib\" />
+    <Folder Include="inc\niffs\" />
+    <Folder Include="inc\remotefs\" />
+    <Folder Include="src\" />
+    <Folder Include="src\fatfs\" />
+    <Folder Include="src\gnu-ed-1.16\" />
+    <Folder Include="src\gnu-ed-1.16\doc\" />
+    <Folder Include="src\gnu-ed-1.16\testsuite\" />
+    <Folder Include="src\lua\" />
+    <Folder Include="src\modules\" />
+    <Folder Include="src\newlib\" />
+    <Folder Include="src\niffs\" />
+    <Folder Include="src\platform\" />
+    <Folder Include="src\platform\avr32\" />
+    <Folder Include="src\platform\avr32\EVK1100\" />
+    <Folder Include="src\platform\avr32\EVK1101\" />
+    <Folder Include="src\platform\avr32\MIZAR32\" />
+    <Folder Include="src\platform\avr32\MT48LC16M16A2TG7E\" />
+    <Folder Include="src\remotefs\" />
+    <Folder Include="src\rxspencer\" />
+    <Folder Include="src\serial\" />
+    <Folder Include="src\shell\" />
+    <Folder Include="src\uip\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\gnu-ed-1.16\AUTHORS">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\ChangeLog">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\configure">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\COPYING">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\doc\ed.1">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\doc\ed.info">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\doc\ed.texi">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\doc\fdl.texi">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\INSTALL">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\Makefile.in">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\NEWS">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\README">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\red.in">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\a.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\a.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\a.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\addr1.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\addr2.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\addr3.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\addr4.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\bang1.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\bang2.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\c.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\c.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\c1.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\c2.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\check.sh">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\d.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\d.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\d.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\e1.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\e1.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\e1.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\e2.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\e2.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\e2.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\e3.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\e3.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\e3.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\e4.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\e4.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\e5.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\e5.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\f1.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\f2.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\g.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\g.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\g1.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\g2.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\g3.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\h.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\i.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\i.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\i.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\j.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\j.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\k.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\k.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\k1.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\k2.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\k3.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\m.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\m_addr.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\m_addr.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\p1.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\p2.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\q.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\q.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\q1.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\q2.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\q3.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\q4.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\q5.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\q6.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\q7.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\q8.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\r.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\r1.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\r1.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\r2.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\r2.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\r3.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\r3.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s01.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s02.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s03.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s04.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s05.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s06.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s07.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s08.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s09.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s10.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s11.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s12.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s13.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s14.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s15.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s16.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s17.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s18.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s19.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s20.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\s21.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\t.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\t.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\t1.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\t2.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\test.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\u.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\v.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\v.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\w.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\w.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\w1.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\w2.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\w3.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\x.ed">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\x.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\x.r">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\testsuite\z.err">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\gnu-ed-1.16\TODO">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\lua\Makefile">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\platform\avr32\at32uc3a0128.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\platform\avr32\at32uc3a0128_emblod.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\platform\avr32\at32uc3a0256.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\platform\avr32\at32uc3a0512.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\platform\avr32\at32uc3b0256.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\platform\avr32\build_config.lua">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\platform\avr32\conf.lua">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\rxspencer\CMakeLists.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\rxspencer\COPYRIGHT">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\rxspencer\librxspencer.def">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\rxspencer\README">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\rxspencer\rxspencer.3">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\rxspencer\rxspencer.7">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\rxspencer\RXSpencerConfig.cmake.in">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\rxspencer\tests">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\rxspencer\WHATSNEW">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

@@ -1,0 +1,13 @@
+Changes in version 1.16:
+
+The substitute command no longer complains about an 'Infinite substitution
+loop' with a substitution like 's/^/#/g'. (Reported by Bjoern Wibben).
+
+The length limit of the prompt string has been removed.
+(Reported by Tim Chase).
+
+It has been documented in the manual that extended regular expression
+operators may be unavailable depending on the particular regex
+implementation in the system running ed. (Reported by Brian Zwahr).
+
+Several fixes and improvements have been made to the manual.
